@@ -1768,3 +1768,15 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.po
 2023-07-28 10:10:59,856 [Worker-7: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 3 resources
 2023-07-28 10:16:20,198 [Worker-0: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2023-07-28 10:16:20,200 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-07-28 10:16:20,204 [Worker-0: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-07-28 10:16:20,206 [Worker-0: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-07-28 10:46:01,118 [Worker-11: Retrieving catalog resource] INFO  o.a.h.c.h.i.c.HttpRequestRetryExec - Recoverable I/O exception (org.apache.hc.core5.http.NoHttpResponseException) caught when processing request to {s}->https://marketplace.eclipse.org:443
+2023-07-28 11:10:57,466 [Worker-22: Creating project "EzyPro"] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: EzyPro:EzyPro:0.0.1-SNAPSHOT @ C:\Users\itp\eclipse-workspace\EzyPro\pom.xml.
+2023-07-28 11:10:58,571 [Worker-22: Creating project "EzyPro"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /EzyPro/src/main/java
+2023-07-28 11:10:58,573 [Worker-22: Creating project "EzyPro"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /EzyPro/src/main/resources
+2023-07-28 11:10:58,574 [Worker-22: Creating project "EzyPro"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /EzyPro/src/test/java
+2023-07-28 11:10:58,576 [Worker-22: Creating project "EzyPro"] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /EzyPro/src/test/resources
+2023-07-28 11:10:59,202 [Worker-34: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-07-28 11:10:59,204 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource
+2023-07-28 11:10:59,209 [Worker-34: Building] WARN  o.a.m.s.f.DefaultMavenResourcesFiltering - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-07-28 11:10:59,213 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource

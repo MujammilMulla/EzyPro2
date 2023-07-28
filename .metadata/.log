@@ -483,3 +483,103 @@ org.eclipse.jgit.errors.TransportException: https://github.com/MujammilMulla/Ezy
 	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
 	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:204)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-07-28 10:42:00.083
+!MESSAGE Can't connect to any repository: 
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-07-28 10:44:09.474
+!MESSAGE Failed to initialize Git team provider.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Connecting Git team provider failed. See log for details.
+	at org.eclipse.egit.core.op.ConnectProviderOperation.execute(ConnectProviderOperation.java:118)
+	at org.eclipse.egit.ui.internal.sharing.SharingWizard$1.run(SharingWizard.java:134)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Contains: Error connecting project EzyBill, suggested path 'C:\Users\itp\eclipse-workspace\EzyBill\.git' does not match found Git repositories '[RepositoryMapping[<empty> -> '.git', absolute path: 'C:/Users/itp/eclipse-workspace/EzyBill/EzyBill/.git' ], RepositoryMapping[<empty> -> '../../.git', absolute path: 'C:/Users/itp/eclipse-workspace/.git' ]]'.
+!SUBENTRY 1 org.eclipse.egit.core 4 0 2023-07-28 10:44:09.474
+!MESSAGE Connecting Git team provider failed. See log for details.
+!SUBENTRY 2 org.eclipse.egit.core 4 0 2023-07-28 10:44:09.474
+!MESSAGE Error connecting project EzyBill, suggested path 'C:\Users\itp\eclipse-workspace\EzyBill\.git' does not match found Git repositories '[RepositoryMapping[<empty> -> '.git', absolute path: 'C:/Users/itp/eclipse-workspace/EzyBill/EzyBill/.git' ], RepositoryMapping[<empty> -> '../../.git', absolute path: 'C:/Users/itp/eclipse-workspace/.git' ]]'.
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-07-28 10:44:33.015
+!MESSAGE file:///C:\Users\itp\git\repository2\EzyBill: not found.
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: file:///C:\Users\itp\git\repository2\EzyBill: not found.
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:192)
+	at org.eclipse.jgit.api.LsRemoteCommand.call(LsRemoteCommand.java:131)
+	at org.eclipse.egit.core.op.ListRemoteOperation.run(ListRemoteOperation.java:116)
+	at org.eclipse.egit.ui.internal.components.AsynchronousListOperation.run(AsynchronousListOperation.java:76)
+	at org.eclipse.egit.ui.internal.dialogs.CancelableFuture$1.run(CancelableFuture.java:280)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.errors.NoRemoteRepositoryException: file:///C:\Users\itp\git\repository2\EzyBill: not found.
+	at org.eclipse.jgit.transport.TransportLocal$1.open(TransportLocal.java:100)
+	at org.eclipse.jgit.transport.TransportBundleFile$1.open(TransportBundleFile.java:74)
+	at org.eclipse.jgit.transport.Transport.open(Transport.java:521)
+	at org.eclipse.jgit.transport.Transport.open(Transport.java:274)
+	at org.eclipse.jgit.transport.Transport.open(Transport.java:244)
+	at org.eclipse.jgit.api.LsRemoteCommand.execute(LsRemoteCommand.java:158)
+	... 5 more
+
+!ENTRY org.eclipse.egit.core 4 0 2023-07-28 10:44:36.602
+!MESSAGE An exception occurred during push on URI file:///C:\Users\itp\git\repository2\EzyBill: file:///C:\Users\itp\git\repository2\EzyBill: not found.
+!STACK 0
+org.eclipse.jgit.errors.NoRemoteRepositoryException: file:///C:\Users\itp\git\repository2\EzyBill: not found.
+	at org.eclipse.jgit.transport.TransportLocal$1.open(TransportLocal.java:100)
+	at org.eclipse.jgit.transport.TransportBundleFile$1.open(TransportBundleFile.java:74)
+	at org.eclipse.jgit.transport.Transport.open(Transport.java:521)
+	at org.eclipse.jgit.transport.Transport.open(Transport.java:492)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:256)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-07-28 10:44:36.603
+!MESSAGE Can't connect to any repository: file:///C:\Users\itp\git\repository2\EzyBill (file:///C:\Users\itp\git\repository2\EzyBill: not found.)
+
+!ENTRY org.eclipse.egit.core 4 0 2023-07-28 10:45:49.615
+!MESSAGE An exception occurred during push on URI https://github.com/MujammilMulla/EzyPro1.git: https://github.com/MujammilMulla/EzyPro1.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/MujammilMulla/EzyPro1.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:696)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:638)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:138)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1537)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:204)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.egit.core 4 0 2023-07-28 10:54:34.697
+!MESSAGE An exception occurred during push on URI https://github.com/MujammilMulla/EzyPro1.git: https://github.com/MujammilMulla/EzyPro1.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/MujammilMulla/EzyPro1.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:696)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:638)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:541)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:138)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1537)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.ConfirmationPage$2.run(ConfirmationPage.java:204)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-07-28 11:10:59.203
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2023-07-28 11:10:59.210
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-07-28 11:10:59.465
+!MESSAGE Connecting Git team provider failed. See log for details.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Connecting Git team provider failed. See log for details.
+	at org.eclipse.egit.core.op.ConnectProviderOperation.execute(ConnectProviderOperation.java:118)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$8.run(GitImportWizard.java:289)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2382)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2402)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:296)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:206)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Contains: Error connecting project EzyPro, suggested path 'C:\Users\itp\git\EzyPro\.git' does not match found Git repositories '[RepositoryMapping[<empty> -> '../.git', absolute path: 'C:/Users/itp/eclipse-workspace/.git' ]]'.
+!SUBENTRY 1 org.eclipse.egit.core 4 0 2023-07-28 11:10:59.466
+!MESSAGE Connecting Git team provider failed. See log for details.
+!SUBENTRY 2 org.eclipse.egit.core 4 0 2023-07-28 11:10:59.466
+!MESSAGE Error connecting project EzyPro, suggested path 'C:\Users\itp\git\EzyPro\.git' does not match found Git repositories '[RepositoryMapping[<empty> -> '../.git', absolute path: 'C:/Users/itp/eclipse-workspace/.git' ]]'.
