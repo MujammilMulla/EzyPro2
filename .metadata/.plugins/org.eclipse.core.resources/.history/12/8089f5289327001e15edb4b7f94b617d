@@ -1,0 +1,5 @@
+package EzyBill.GenericUtility;
+
+public class WebDriverUtility {
+
+}

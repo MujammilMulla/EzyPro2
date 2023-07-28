@@ -1,0 +1,26 @@
+package EzyBill.ObjectRepository;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class StbPage {
+
+	@FindBy(xpath = "//a[text()='Create STB/Edit STB']")
+	private WebElement createSTB;
+	
+	@FindBy(xpath = "//a[text()='Transfer STB']")
+	private WebElement transferSTB;
+	
+	@FindBy(xpath = "//a[text()='Pull Stock']")
+	private WebElement pullStock;
+	
+	@FindBy(xpath = "//div[@id='sidebarstb']/descendant::a[text()='STB List']")
+	private WebElement stbList;
+	
+	public StbPage(WebDriver driver)
+	{
+		PageFactory.initElements(driver, this);
+	}
+}

@@ -1,0 +1,16 @@
+package EzyBill.GenericUtility;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.WebDriver;
+
+public class ExcelFileUtility {
+
+	public String readDataFromExcelSheet(WebDriver driver) throws Throwable
+	{
+		FileInputStream fis=new FileInputStream(".\\src\\test\\resources\\Create STB.xlsx");
+		return WorkbookFactory.create(fis).getSheet("CreateSTB").getRow(1).getCell(1).getStringCellValue();
+	}
+}

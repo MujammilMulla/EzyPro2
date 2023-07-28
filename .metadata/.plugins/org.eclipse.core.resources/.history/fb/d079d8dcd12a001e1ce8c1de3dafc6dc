@@ -1,0 +1,8 @@
+package EzyBill.GenericUtility;
+
+public interface IConstantUtility {
+
+	String propertyFilePath=".\\\\src\\\\test\\\\resources\\\\CommonData.properties";
+	String excelFilePath=".\\\\src\\\\test\\\\resources\\\\Create STB.xlsx";
+	String createLCOExcelFilePath="\\src\\test\\resources\\addLCO.xlsx";
+}

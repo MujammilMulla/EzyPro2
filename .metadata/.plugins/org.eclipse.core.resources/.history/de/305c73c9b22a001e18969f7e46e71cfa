@@ -1,0 +1,125 @@
+package EzyBill.ObjectRepository;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class HomePage {
+	
+	@FindBy(xpath = "//span[text()=' STB ']")
+	private WebElement STB;
+
+	@FindBy(xpath = "//span[text()=' DAS ']")
+	private WebElement DAS;
+	
+	@FindBy(xpath = "//img[@src='http://192.168.1.143/patch6/assets/css/img2/img-profile.jpg']")
+	private WebElement profileImg;
+	
+	@FindBy(xpath = "//span[text()='Logout']")
+	private WebElement logoutBtn;
+	
+	@FindBy(xpath = "")
+	private WebElement dashboard;
+	
+	@FindBy(xpath = "")
+	private WebElement customers;
+	
+	@FindBy(xpath = "")
+	private WebElement users;
+	
+	@FindBy(xpath = "")
+	private WebElement products;
+	
+	@FindBy(xpath = "")
+	private WebElement channels;
+	
+	@FindBy(xpath = "")
+	private WebElement complaints;
+	
+	@FindBy(xpath = "")
+	private WebElement reports;
+	
+	@FindBy(xpath = "")
+	private WebElement inventory;
+	
+	@FindBy(xpath = "")
+	private WebElement trai;
+	
+	@FindBy(xpath = "")
+	private WebElement setting;
+	
+	@FindBy(xpath = "")
+	private WebElement customerBillingShare;
+	
+	public WebElement getDashboard() {
+		return dashboard;
+	}
+
+	public WebElement getCustomers() {
+		return customers;
+	}
+
+	public WebElement getUsers() {
+		return users;
+	}
+
+	public WebElement getProducts() {
+		return products;
+	}
+
+	public WebElement getChannels() {
+		return channels;
+	}
+
+	public WebElement getComplaints() {
+		return complaints;
+	}
+
+	public WebElement getReports() {
+		return reports;
+	}
+
+	public WebElement getInventory() {
+		return inventory;
+	}
+
+	public WebElement getTrai() {
+		return trai;
+	}
+
+	public WebElement getSetting() {
+		return setting;
+	}
+
+	public WebElement getCustomerBillingShare() {
+		return customerBillingShare;
+	}
+
+	public WebElement getProfileImg() {
+		return profileImg;
+	}
+
+	public WebElement getSTB() {
+		return STB;
+	}
+
+	public WebElement getDAS() {
+		return DAS;
+	}
+
+	public WebElement getLogoutBtn() {
+		return logoutBtn;
+	}
+
+	public void logout()
+	{
+		profileImg.click();
+		getLogoutBtn().click();
+	}
+	
+	public HomePage(WebDriver driver)
+	{
+		PageFactory.initElements(driver, this);
+	}
+}

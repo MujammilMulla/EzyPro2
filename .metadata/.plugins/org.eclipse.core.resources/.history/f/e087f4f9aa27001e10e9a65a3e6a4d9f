@@ -1,0 +1,62 @@
+package EzyBill.GenericUtility;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class WebDriverUtility {
+
+	/**
+	 * This method will maximize window
+	 * @param driver
+	 */
+	public void maximizeWindow(WebDriver driver)
+	{
+		driver.manage().window().maximize();
+	}
+	
+	/**
+	 * This method will minimize window
+	 * @param driver
+	 */
+	public void minimizeWindow(WebDriver driver)
+	{
+		driver.manage().window().minimize();
+	}
+	
+	/**
+	 * This method will wait for 10 seconds for page load
+	 * @param driver
+	 */
+	public void waitForPageLoad(WebDriver driver)
+	{
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	}
+	
+	/**
+	 * This method will wait till element is visible
+	 * @param driver
+	 * @param element
+	 */
+	public void waitForElementToBeVisible(WebDriver driver, WebElement element)
+	{
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOf(element));
+	}
+	
+	/**
+	 * This meyhod will wait till element is clickable
+	 * @param driver
+	 * @param element
+	 */
+	public void waitForElementToBeClickable(WebDriver driver, WebElement element)
+	{
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(element));
+	}
+	
+}

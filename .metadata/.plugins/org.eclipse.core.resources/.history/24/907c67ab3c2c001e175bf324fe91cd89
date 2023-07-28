@@ -1,0 +1,26 @@
+package EzyBill.STB;
+
+import java.sql.DriverManager;
+
+import org.testng.annotations.Test;
+
+import EzyBill.GenericUtility.BaseClass;
+import EzyBill.ObjectRepository.HomePage;
+
+
+public class PracticeProgram //extends BaseClass
+{
+	
+	@Test
+	public void main() throws Throwable 
+	{
+		//HomePage hp=new HomePage(driver);
+		//hp.getCustomerBillingShare().click();
+		
+		 String url = "jdbc:mysql://192.168.1.16/";
+	        String user = "root";
+	        String password = "Itp$0ft@16";
+	       DriverManager.getConnection(url, user, password);       
+
+	}
+}

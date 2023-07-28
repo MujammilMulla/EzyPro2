@@ -1,0 +1,34 @@
+package EzyBill.ObjectRepository;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class HomePage {
+
+	@FindBy(xpath = "//img[@src='http://192.168.1.143/patch6/assets/css/img2/img-profile.jpg']")
+	private WebElement profileImg;
+	
+	@FindBy(xpath = "//span[text()='Logout']")
+	private WebElement logoutBtn;
+	
+	public WebElement getProfileImg() {
+		return profileImg;
+	}
+
+	public WebElement getLogoutBtn() {
+		return logoutBtn;
+	}
+
+	public void logout()
+	{
+		getProfileImg().click();
+		getLogoutBtn().click();
+	}
+	
+	public HomePage(WebDriver driver)
+	{
+		PageFactory.initElements(driver, this);
+	}
+}

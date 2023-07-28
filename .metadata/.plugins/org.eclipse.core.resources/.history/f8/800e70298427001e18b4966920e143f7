@@ -1,0 +1,14 @@
+package EzyBill.STB;
+
+import org.testng.annotations.Test;
+
+import EzyBill.GenericUtility.BaseClass;
+
+public class CreateStbTest extends BaseClass {
+
+	@Test
+	public void test()
+	{
+		System.out.println("abxd");
+	}
+}

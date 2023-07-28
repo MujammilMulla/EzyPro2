@@ -1,0 +1,23 @@
+package EzyBill.STB;
+
+import org.testng.annotations.Test;
+
+import EzyBill.GenericUtility.BaseClass;
+import EzyBill.ObjectRepository.CreateStbPage;
+import EzyBill.ObjectRepository.StbPage;
+
+public class CreateStbTest extends BaseClass {
+
+	@Test
+	public void test()
+	{
+		/*System.out.println("===========Test Script==============");
+		hp.getSTB().click();
+		StbPage sp=new StbPage(driver);
+		sp.getCreateSTB().click();
+		CreateStbPage csp=new CreateStbPage(driver);
+		csp.createStb("CAS", "IRDETO", "HO", "Arun", "12324", "1234", "500", "CDCAD", "CDCAD", "Days", "100", "554", "HD", "88898", "88898");
+        */	
+	
+	}
+}

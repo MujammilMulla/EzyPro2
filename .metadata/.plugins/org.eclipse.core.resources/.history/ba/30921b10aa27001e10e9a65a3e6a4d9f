@@ -1,0 +1,62 @@
+package EzyBill.ObjectRepository;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class CreateStbPage {
+
+	@FindBy (xpath = "//select[@id='services']")
+	private WebElement casDropdown;
+	
+	@FindBy (xpath = "//select[@id='sip']")
+	private WebElement serverTypeDropdown;
+	
+	@FindBy (xpath = "")
+	private WebElement locationDropdown;
+	
+	@FindBy (xpath = "")
+	private WebElement supplierDropdown;
+	
+	@FindBy (xpath = "")
+	private WebElement poNumberEdt;
+	
+	@FindBy (xpath = "")
+	private WebElement invoiceNumberEdt;
+	
+	@FindBy (xpath = "")
+	private WebElement pricePerUnitEdt;
+	
+	@FindBy (xpath = "")
+	private WebElement makeDropdown;
+	
+	@FindBy (xpath = "")
+	private WebElement modelDropdown;
+	
+	@FindBy (xpath = "")
+	private WebElement waranteeInDropdown;
+	
+	@FindBy (xpath = "")
+	private WebElement waranteePeriodUnitEdt;
+	
+	@FindBy (xpath = "")
+	private WebElement batchNumberPerUnitEdt;
+	
+	@FindBy (xpath = "")
+	private WebElement stbTypeInDropdown;
+	
+	@FindBy (xpath = "//textarea[@id='remarks']")
+	private WebElement remarkstEdt;
+	
+	@FindBy (xpath = "//input[@id='create_individual']")
+	private WebElement createIndividualRadio;
+	
+	@FindBy (xpath = "//a[@type='submit']")
+	private WebElement editBtn;
+	
+	public CreateStbPage(WebDriver driver)
+	{
+		PageFactory.initElements(driver, this);
+	}
+}

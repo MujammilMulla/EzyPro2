@@ -1,0 +1,32 @@
+package EzyBill.STB;
+
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+
+import EzyBill.GenericUtility.BaseClass;
+import EzyBill.GenericUtility.JavaUtilities;
+import EzyBill.ObjectRepository.CreateStbPage;
+import EzyBill.ObjectRepository.HomePage;
+import EzyBill.ObjectRepository.StbPage;
+
+public class CreateStbTest extends BaseClass {
+
+	@Test
+	public void test() throws Throwable
+	{
+		JavaUtilities jUtil=new JavaUtilities();
+		HomePage hp=new HomePage(driver);
+		hp.getSTB().click();
+		StbPage sp=new StbPage(driver);
+		sp.getCreateSTB().click();
+		CreateStbPage csp=new CreateStbPage(driver);
+		csp.createStb(driver, "CAS", "IRDETO", "HO", "Arun", "12324", "1234", "500", "CDCAD", "CDCAD", "Days", "100", "554", "HD", "88898"+jUtil.getRandomNumber(), "88898"+jUtil.getRandomNumber());
+		String expected="Success.";
+		String actual=driver.findElement(By.xpath("//strong[text()='Success.']")).getText();
+		assertEquals(actual, expected);
+	}
+}

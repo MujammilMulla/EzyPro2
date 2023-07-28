@@ -1,0 +1,16 @@
+package EzyBill.GenericUtility;
+
+import java.util.Random;
+
+public class JavaUtilities 
+{
+	/**
+	 * This method will return random numbers
+	 * @return
+	 */
+	public int getRandomNumber()
+	{
+		Random r=new Random();
+		return r.nextInt(100);
+	}
+}

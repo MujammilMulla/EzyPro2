@@ -1,0 +1,54 @@
+package EzyBill.ObjectRepository;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class UsersPage {
+	@FindBy(xpath = "")
+	private WebElement createUser;
+	
+	@FindBy(xpath = "")
+	private WebElement listUsers;
+	
+	@FindBy(xpath = "")
+	private WebElement bulkProductMapping;
+	
+	@FindBy(xpath = "")
+	private WebElement intraLcoMapping;
+	
+	@FindBy(xpath = "")
+	private WebElement lcoPayment;
+	
+	@FindBy(xpath = "")
+	private WebElement lcoPaymentsList;
+	
+	@FindBy(xpath = "")
+	private WebElement lcoPayableFormat;
+	
+	@FindBy(xpath = "")
+	private WebElement lcoBilling;
+	
+	@FindBy(xpath = "")
+	private WebElement gstReceipt;
+	
+	@FindBy(xpath = "")
+	private WebElement distributorList;
+	
+	@FindBy(xpath = "")
+	private WebElement lcoPackages;
+	
+	@FindBy(xpath = "")
+	private WebElement outletDeposits;
+	
+	@FindBy(xpath = "")
+	private WebElement customerOnlinePayments;
+	
+	@FindBy(xpath = "")
+	private WebElement serviceEmployeeList;
+	
+	@FindBy(xpath = "")
+	private WebElement lcoPaymentReconciliation;
+	
+	@FindBy(xpath = "")
+	private WebElement lcoSharePercentages;
+}

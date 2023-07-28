@@ -1,0 +1,71 @@
+package EzyBill.GenericUtility;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+
+import EzyBill.ObjectRepository.HomePage;
+import EzyBill.ObjectRepository.LoginPage;
+
+public class BaseClass 
+{
+	PropertyFileUtility p=new PropertyFileUtility();
+	WebDriver driver;
+	public HomePage hp=new HomePage(driver);
+	@BeforeSuite
+	public void bSuite()
+	{
+		
+	}
+	@BeforeClass
+	public void bClass() throws Throwable
+	{
+		String BROWSER=p.readDataFromPropertyFile("browser");
+		String URL=p.readDataFromPropertyFile("url");
+		if(BROWSER.contains("chrome"))
+		{
+			driver=new ChromeDriver();
+			
+		}
+		if(BROWSER.contains("firefox"))
+		{
+			driver=new FirefoxDriver();
+		}
+		if(BROWSER.contains("edge"))
+		{
+			driver=new EdgeDriver();
+		}
+		driver.get(URL);
+	}
+	@BeforeMethod
+	public void bMethod() throws Throwable
+	{
+		String URL=p.readDataFromPropertyFile("url");
+		String USERNAME=p.readDataFromPropertyFile("username");
+		String PASSWORD=p.readDataFromPropertyFile("password");
+		LoginPage lp=new LoginPage(driver);
+		lp.loginToApplication(USERNAME, PASSWORD);
+	}
+	@AfterMethod
+	public void aMethod()
+	{
+		hp.logout();
+	}
+	@AfterClass
+	public void aClass()
+	{
+		driver.quit();
+	}
+	@AfterSuite
+	public void aSuite()
+	{
+		
+	}
+}

@@ -1,0 +1,61 @@
+package EzyBill.GenericUtility;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+
+public class BaseClass 
+{
+	PropertyFileUtility p=new PropertyFileUtility();
+	
+	@BeforeSuite
+	public void bSuite()
+	{
+		
+	}
+	@BeforeClass
+	public void bClass() throws Throwable
+	{
+		String BROWSER=p.readDataFromPropertyFile("browser");
+		if(BROWSER.contains("chrome"))
+		{
+			WebDriver driver=new ChromeDriver();
+			
+		}
+		if(BROWSER.contains("firefox"))
+		{
+			WebDriver driver=new FirefoxDriver();
+		}
+		if(BROWSER.contains("edge"))
+		{
+			WebDriver driver=new EdgeDriver();
+		}
+	}
+	@BeforeMethod
+	public void bMethod()
+	{
+		
+	}
+	@AfterMethod
+	public void aMethod()
+	{
+		
+	}
+	@AfterClass
+	public void aClass()
+	{
+		
+	}
+	@AfterSuite
+	public void aSuite()
+	{
+		
+	}
+}
